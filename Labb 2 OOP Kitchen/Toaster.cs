@@ -6,26 +6,28 @@ using System.Threading.Tasks;
 
 namespace Labb_2_OOP_Kitchen
 {
-	public class Toaster : KitchenAppliance, IKitchenAppliance
+	public class Toaster : KitchenAppliance
 	{
-		public string Type { get; set; }
-		public string Brand { get; set; }
-		public bool IsFunctioning { get; set; }
-		private int TimesUsed { get; set; }
+		private int TimesUsed;
 		public Toaster(string type, string brand, bool isFunctioning)
 		{
 			Type = type;
 			Brand = brand;
 			IsFunctioning = isFunctioning;
+			TimesUsed = 0;
+		}
+		public Toaster()
+		{
+
 		}
 
-		public void Use()
-		{
+		public override void Use()
+		{			
 			if (IsFunctioning)
 			{
 				TimesUsed++;
 				Random rnd = new Random();
-				if (TimesUsed > rnd.Next(1, 10))
+				if (TimesUsed > rnd.Next(1, 6))
 				{
 					IsFunctioning = false;
 					Console.WriteLine("KAFRÄÄääS!");
@@ -56,7 +58,7 @@ namespace Labb_2_OOP_Kitchen
 			}
 			else
 			{
-				RepairMessage();
+				Console.WriteLine("Apparaten är trasig, kontakta en reparatör");
 			}
 		}
 	}

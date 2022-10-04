@@ -6,39 +6,25 @@ using System.Threading.Tasks;
 
 namespace Labb_2_OOP_Kitchen
 {
-	public class Oven : KitchenAppliance, IKitchenAppliance
+	public class Oven : KitchenAppliance
 	{
-		public string Type { get; set; }
-		public string Brand { get; set; }
-		public bool IsFunctioning { get; set; }
-		private int TimesUsed { get; set; }
+		private int TimesUsed;
 		public Oven(string type, string brand, bool isFunctioning)
 		{
 			Type = type;
 			Brand = brand;
 			IsFunctioning = isFunctioning;
+			TimesUsed = 0;
 		}
-
-		public void Use()
+		public Oven()
 		{
-			if (IsFunctioning)
-			{
-				TimesUsed++;
-				Random rnd = new Random();
-				if (TimesUsed > rnd.Next(1, 10))
-				{
-					IsFunctioning = false;
-					Console.WriteLine("Skiiiit säkringen gick! Kortis i ugnen!");
-				}
-				else
-				{
-					Console.WriteLine("baking");
-				}
-			}
-			else
-			{
-				RepairMessage();
-			}
+
+		}
+		public override void Use()
+		{
+			string machineMalfunctionMessage = "Skiiiit säkringen gick! Kortis i ugnen!";
+			string machineWorkingMessage = "baking";
+			TimesUsed = WillItBreak(machineMalfunctionMessage, machineWorkingMessage, IsFunctioning, TimesUsed);
 		}
 	}
 }
