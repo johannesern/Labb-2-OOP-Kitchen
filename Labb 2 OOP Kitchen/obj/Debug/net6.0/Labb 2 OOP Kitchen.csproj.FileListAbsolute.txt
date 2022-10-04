@@ -1,0 +1,30 @@
+C:\Users\johan\source\repos\Labb 2 OOP Kitchen\bin\Debug\net6.0\Labb 2 OOP Kitchen.exe
+C:\Users\johan\source\repos\Labb 2 OOP Kitchen\bin\Debug\net6.0\Labb 2 OOP Kitchen.deps.json
+C:\Users\johan\source\repos\Labb 2 OOP Kitchen\bin\Debug\net6.0\Labb 2 OOP Kitchen.runtimeconfig.json
+C:\Users\johan\source\repos\Labb 2 OOP Kitchen\bin\Debug\net6.0\Labb 2 OOP Kitchen.dll
+C:\Users\johan\source\repos\Labb 2 OOP Kitchen\bin\Debug\net6.0\Labb 2 OOP Kitchen.pdb
+C:\Users\johan\source\repos\Labb 2 OOP Kitchen\obj\Debug\net6.0\Labb 2 OOP Kitchen.csproj.AssemblyReference.cache
+C:\Users\johan\source\repos\Labb 2 OOP Kitchen\obj\Debug\net6.0\Labb 2 OOP Kitchen.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\johan\source\repos\Labb 2 OOP Kitchen\obj\Debug\net6.0\Labb 2 OOP Kitchen.AssemblyInfoInputs.cache
+C:\Users\johan\source\repos\Labb 2 OOP Kitchen\obj\Debug\net6.0\Labb 2 OOP Kitchen.AssemblyInfo.cs
+C:\Users\johan\source\repos\Labb 2 OOP Kitchen\obj\Debug\net6.0\Labb 2 OOP Kitchen.csproj.CoreCompileInputs.cache
+C:\Users\johan\source\repos\Labb 2 OOP Kitchen\obj\Debug\net6.0\Labb 2 OOP Kitchen.dll
+C:\Users\johan\source\repos\Labb 2 OOP Kitchen\obj\Debug\net6.0\refint\Labb 2 OOP Kitchen.dll
+C:\Users\johan\source\repos\Labb 2 OOP Kitchen\obj\Debug\net6.0\Labb 2 OOP Kitchen.pdb
+C:\Users\johan\source\repos\Labb 2 OOP Kitchen\obj\Debug\net6.0\Labb 2 OOP Kitchen.genruntimeconfig.cache
+C:\Users\johan\source\repos\Labb 2 OOP Kitchen\obj\Debug\net6.0\ref\Labb 2 OOP Kitchen.dll
+C:\Users\johan\Desktop\ITHS\Inlämningsuppgifter\Lab 2\Lab 2 - OOP Köket\Labb 2 OOP Kitchen\bin\Debug\net6.0\Labb 2 OOP Kitchen.exe
+C:\Users\johan\Desktop\ITHS\Inlämningsuppgifter\Lab 2\Lab 2 - OOP Köket\Labb 2 OOP Kitchen\bin\Debug\net6.0\Labb 2 OOP Kitchen.deps.json
+C:\Users\johan\Desktop\ITHS\Inlämningsuppgifter\Lab 2\Lab 2 - OOP Köket\Labb 2 OOP Kitchen\bin\Debug\net6.0\Labb 2 OOP Kitchen.runtimeconfig.json
+C:\Users\johan\Desktop\ITHS\Inlämningsuppgifter\Lab 2\Lab 2 - OOP Köket\Labb 2 OOP Kitchen\bin\Debug\net6.0\Labb 2 OOP Kitchen.dll
+C:\Users\johan\Desktop\ITHS\Inlämningsuppgifter\Lab 2\Lab 2 - OOP Köket\Labb 2 OOP Kitchen\bin\Debug\net6.0\Labb 2 OOP Kitchen.pdb
+C:\Users\johan\Desktop\ITHS\Inlämningsuppgifter\Lab 2\Lab 2 - OOP Köket\Labb 2 OOP Kitchen\obj\Debug\net6.0\Labb 2 OOP Kitchen.csproj.AssemblyReference.cache
+C:\Users\johan\Desktop\ITHS\Inlämningsuppgifter\Lab 2\Lab 2 - OOP Köket\Labb 2 OOP Kitchen\obj\Debug\net6.0\Labb 2 OOP Kitchen.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\johan\Desktop\ITHS\Inlämningsuppgifter\Lab 2\Lab 2 - OOP Köket\Labb 2 OOP Kitchen\obj\Debug\net6.0\Labb 2 OOP Kitchen.AssemblyInfoInputs.cache
+C:\Users\johan\Desktop\ITHS\Inlämningsuppgifter\Lab 2\Lab 2 - OOP Köket\Labb 2 OOP Kitchen\obj\Debug\net6.0\Labb 2 OOP Kitchen.AssemblyInfo.cs
+C:\Users\johan\Desktop\ITHS\Inlämningsuppgifter\Lab 2\Lab 2 - OOP Köket\Labb 2 OOP Kitchen\obj\Debug\net6.0\Labb 2 OOP Kitchen.csproj.CoreCompileInputs.cache
+C:\Users\johan\Desktop\ITHS\Inlämningsuppgifter\Lab 2\Lab 2 - OOP Köket\Labb 2 OOP Kitchen\obj\Debug\net6.0\Labb 2 OOP Kitchen.dll
+C:\Users\johan\Desktop\ITHS\Inlämningsuppgifter\Lab 2\Lab 2 - OOP Köket\Labb 2 OOP Kitchen\obj\Debug\net6.0\refint\Labb 2 OOP Kitchen.dll
+C:\Users\johan\Desktop\ITHS\Inlämningsuppgifter\Lab 2\Lab 2 - OOP Köket\Labb 2 OOP Kitchen\obj\Debug\net6.0\Labb 2 OOP Kitchen.pdb
+C:\Users\johan\Desktop\ITHS\Inlämningsuppgifter\Lab 2\Lab 2 - OOP Köket\Labb 2 OOP Kitchen\obj\Debug\net6.0\Labb 2 OOP Kitchen.genruntimeconfig.cache
+C:\Users\johan\Desktop\ITHS\Inlämningsuppgifter\Lab 2\Lab 2 - OOP Köket\Labb 2 OOP Kitchen\obj\Debug\net6.0\ref\Labb 2 OOP Kitchen.dll
