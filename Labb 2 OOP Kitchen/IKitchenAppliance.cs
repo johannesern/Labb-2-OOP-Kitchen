@@ -11,49 +11,45 @@ namespace Labb_2_OOP_Kitchen
 		string Type { get; set; }
 		string Brand { get; set; }
 		public bool IsFunctioning { get; set; }
-		
-		void Use();
+
+		public void Use(int timesUsed, bool isFunctioning);
 	}
 
 	abstract public class KitchenAppliance : IKitchenAppliance
 	{
-		private List<KitchenAppliance> kitchenAppl = new List<KitchenAppliance>();
-		public List<KitchenAppliance> KitchenAppl
-		{
-			get { return kitchenAppl; }
-			set { kitchenAppl = value; }
-		}
+		internal int TimesUsed { get; set; }
 		public string Type { get; set; }
 		public string Brand { get; set; }
-		public bool IsFunctioning { get; set; }		
+		public bool IsFunctioning { get; set; }
 
-		public virtual void Use()
+		public virtual void Use(int timesUsed, bool isFunctioning)
 		{
-
+			string machineMalfunctionMessage = "*maskinen funkar inte*";
+			string machineWorkingMessage = "*maskinen funkar*";
+			WillItBreak(machineMalfunctionMessage, machineWorkingMessage, isFunctioning, timesUsed);
 		}
 
-		protected int WillItBreak(string machine, string sound, bool IsFunctioning, int TimesUsed)
+		protected bool WillItBreak(string machine, string sound, bool IsFunctioning, int TimesUsed)
 		{
 			if (IsFunctioning)
 			{
 				TimesUsed++;
 				Random rnd = new Random();
-				if (TimesUsed > rnd.Next(1, 6))
+				if (TimesUsed > rnd.Next(1, 2))
 				{
-					IsFunctioning = false;
 					Console.WriteLine(machine);
-					return TimesUsed;
+					return false;
 				}
 				else
 				{
-					Console.WriteLine(sound);
-					return TimesUsed;
+					Console.WriteLine(sound);					
+					return true;
 				}
 			}
 			else
 			{
 				RepairMessage();
-				return TimesUsed;
+				return false;
 			}
 		}
 		private void RepairMessage()

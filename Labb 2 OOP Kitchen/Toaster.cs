@@ -8,26 +8,26 @@ namespace Labb_2_OOP_Kitchen
 {
 	public class Toaster : KitchenAppliance
 	{
-		private int TimesUsed;
+		public int TimesUsed { get; set; }
 		public Toaster(string type, string brand, bool isFunctioning)
 		{
 			Type = type;
 			Brand = brand;
 			IsFunctioning = isFunctioning;
-			TimesUsed = 0;
+			TimesUsed = 5;
 		}
+
 		public Toaster()
 		{
-
 		}
 
-		public override void Use()
+		public override int Use(int timesUsed, bool isFunctioning,)
 		{			
 			if (IsFunctioning)
 			{
-				TimesUsed++;
+				timesUsed++;
 				Random rnd = new Random();
-				if (TimesUsed > rnd.Next(1, 6))
+				if (TimesUsed > rnd.Next(1, 2))
 				{
 					IsFunctioning = false;
 					Console.WriteLine("KAFRÄÄääS!");
@@ -43,22 +43,26 @@ namespace Labb_2_OOP_Kitchen
 						Console.ForegroundColor = ConsoleColor.White;
 						Console.WriteLine("Sådärja! Återgår strax till menyn");
 						Thread.Sleep(2000);
+						return timesUsed;
 					}
 					else
 					{
 						Console.WriteLine("Nehe, då får det bli mörkt");
 						Thread.Sleep(5000);
 						Console.ForegroundColor = ConsoleColor.White;
+						return timesUsed;
 					}
 				}
 				else
 				{
-					Console.WriteLine("toasting");
+					Console.WriteLine("*rostar brödet*");
+					return timesUsed;
 				}
 			}
 			else
 			{
 				Console.WriteLine("Apparaten är trasig, kontakta en reparatör");
+				return timesUsed;
 			}
 		}
 	}

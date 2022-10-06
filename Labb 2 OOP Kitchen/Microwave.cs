@@ -9,24 +9,24 @@ namespace Labb_2_OOP_Kitchen
 {
 	public class Microwave : KitchenAppliance
 	{
-		private int TimesUsed;
+		public int TimesUsed { get; set; }
 		public Microwave(string type, string brand, bool isFunctioning)
 		{
-			Type = type;
+			Type = type;			
 			Brand = brand;
 			IsFunctioning = isFunctioning;
-			TimesUsed = 0;
-		}
+			TimesUsed = 5;
+		}		
 
 		public Microwave()
 		{
 		}
 
-		public override void Use()
+		public override void Use(int timesUsed, bool isFunctioning)
 		{
 			string machineMalfunctionMessage = "KABOOM! Åh nej micron pajade!";
-			string machineWorkingMessage = "beeping";
-			TimesUsed = WillItBreak(machineMalfunctionMessage, machineWorkingMessage, IsFunctioning, TimesUsed);
+			string machineWorkingMessage = "*värmer tallriken, inte maten*";
+			WillItBreak(machineMalfunctionMessage, machineWorkingMessage, isFunctioning, timesUsed);
 		}
 	}
 }
