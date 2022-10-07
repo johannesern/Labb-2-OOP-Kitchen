@@ -7,24 +7,25 @@ using System.Threading.Tasks;
 namespace Labb_2_OOP_Kitchen
 {
 	public class Oven : KitchenAppliance
-	{
-		public int TimesUsed { get; set; }
-		public Oven(string type, string brand, bool isFunctioning)
+	{		
+		public Oven(string type, string brand, bool isFunctioning) : base(type, brand, isFunctioning)
 		{
+			TimesUsed = 5;
 			Type = type;
 			Brand = brand;
-			IsFunctioning = isFunctioning;
-			TimesUsed = 5;
+			IsFunctioning = isFunctioning;			
 		}
+		
 		public Oven()
 		{
+
 		}
 
-		public override void Use(int timesUsed, bool isFunctioning)
+		public override KitchenAppliance Use(KitchenAppliance appl)
 		{
 			string machineMalfunctionMessage = "Skiiiit säkringen gick! Kortis i ugnen!";
 			string machineWorkingMessage = "*bakar något*";			
-			WillItBreak(machineMalfunctionMessage, machineWorkingMessage, isFunctioning, timesUsed);
+			return appl = WillItBreak(machineMalfunctionMessage, machineWorkingMessage, appl);
 		}
 	}
 }

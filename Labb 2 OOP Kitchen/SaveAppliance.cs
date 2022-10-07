@@ -9,7 +9,7 @@ namespace Labb_2_OOP_Kitchen
 {
 	public class SaveAppliance
 	{
-		protected List<KitchenAppliance> kitchenApplianceList = new List<KitchenAppliance>();
+		private List<KitchenAppliance> kitchenApplianceList = new List<KitchenAppliance>();
 		public List<KitchenAppliance> KitchenApplianceList
 		{
 			get { return kitchenApplianceList; }
@@ -102,7 +102,7 @@ namespace Labb_2_OOP_Kitchen
 			string type = SettingMachineType();
 			string brand = SettingMachineBrand();
 			bool isFunctioning = SettingMachineCondition();
-			//KitchenAppliance newAppl = new KitchenAppliance(type, brand, isFunctioning);      TÄNK PÅ DENNA
+			KitchenAppliance newAppl = new KitchenAppliance(type, brand, isFunctioning);
 		}
 		public bool SettingMachineCondition()
 		{
@@ -169,81 +169,37 @@ namespace Labb_2_OOP_Kitchen
 			}
 			return type;
 		}
-		public void PrintingOutAllAppliances()
-		{
-			Console.WriteLine("\n\t\tIndex\tTyp\t\tMärke");
-			int counter = 1;
-			foreach (IKitchenAppliance appliance in KitchenApplianceList)
-			{
-				Console.WriteLine();
-				Console.Write("\t\t" + counter);
-				if (appliance.Type.Length < 8 && appliance.Brand.Length < 8)
-				{
-					Console.Write("\t" + appliance.Type +
-								  "\t\t" + appliance.Brand);
-				}
-				else if (appliance.Type.Length > 7 && appliance.Brand.Length > 7)
-				{
-					Console.Write("\t" + appliance.Type +
-								  "\t" + appliance.Brand);
-				}
-				else if (appliance.Type.Length < 8 && appliance.Brand.Length > 7)
-				{
-					Console.Write("\t" + appliance.Type +
-								  "\t\t" + appliance.Brand);
-				}
-				else
-				{
-					Console.Write("\t" + appliance.Type +
-								  "\t" + appliance.Brand);
-				}
-				counter++;
-			}
-			Console.WriteLine();
-		}
 		public  void RemoveAppliance()
 		{
-			PrintingOutAllAppliances();
+			Utility.PrintingOutAllAppliances(KitchenApplianceList);
 			Console.WriteLine("\n\t\tVilken apparat vill du ta bort? (Skriv in ett heltal)");
-			int applianceIndex = DefiningInt() - 1;
-			Console.WriteLine("\t\tÄr du säker på att du vill ta bort\n" +
+			Console.Write("\t\t- ");
+			int applianceIndex = Utility.DefiningInt() - 1;
+			try
+			{
+				Console.WriteLine("\t\tÄr du säker på att du vill ta bort\n" +
 							  "\t\t" + KitchenApplianceList[applianceIndex].Type +
 							  "\t" + KitchenApplianceList[applianceIndex].Brand);
-			Console.WriteLine("\t\t[1] Ja [2] Nej");
-			Console.Write("\t\t- ");
-			string removeOrNot = Console.ReadLine();
-			if (removeOrNot == "1")
-			{
-				RemovingApplianceFromList(applianceIndex);
-			}
-			else
-			{
-				Console.WriteLine("Inget borttaget, tryck på valfri knapp för att återgå till huvudmenyn.");
-				Console.ReadKey();
-			}
-		}
-		public int DefiningInt()
-		{
-			string input = Console.ReadLine();
-			int applianceIndex;
-			bool run = true;
-			do
-			{
-				bool isInt = Int32.TryParse(input, out applianceIndex);
-				if (isInt)
+				Console.WriteLine("\t\t[1] Ja [2] Nej");
+				Console.Write("\t\t- ");
+				string removeOrNot = Console.ReadLine();
+				if (removeOrNot == "1")
 				{
-					run = false;
+					RemovingApplianceFromList(applianceIndex);
 				}
 				else
 				{
-					Console.WriteLine("\t\tDet där var inte ett heltal, försök igen.");
+					Console.WriteLine("\t\tInget borttaget, tryck på valfri knapp för att återgå till huvudmenyn.");
 					Console.Write("\t\t- ");
-					input = Console.ReadLine();
-
+					Console.ReadKey();
 				}
-			} while (run);
-
-			return applianceIndex;
+			}
+			catch(Exception ex)
+			{
+				Console.WriteLine("\t\tFelaktig inmatning, försök igen.");
+				Console.Write("\t\t- ");
+				Console.ReadKey();
+			}
 		}
 		private void RemovingApplianceFromList(int applianceIndex)
 		{

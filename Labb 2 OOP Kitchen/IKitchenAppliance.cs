@@ -12,49 +12,62 @@ namespace Labb_2_OOP_Kitchen
 		string Brand { get; set; }
 		public bool IsFunctioning { get; set; }
 
-		public void Use(int timesUsed, bool isFunctioning);
+		public KitchenAppliance Use(KitchenAppliance appl);
 	}
 
 	abstract public class KitchenAppliance : IKitchenAppliance
 	{
-		internal int TimesUsed { get; set; }
+		public int TimesUsed { get; set; }
 		public string Type { get; set; }
 		public string Brand { get; set; }
 		public bool IsFunctioning { get; set; }
 
-		public virtual void Use(int timesUsed, bool isFunctioning)
+		public KitchenAppliance(string type, string brand, bool isFunctioning)
 		{
-			string machineMalfunctionMessage = "*maskinen funkar inte*";
-			string machineWorkingMessage = "*maskinen funkar*";
-			WillItBreak(machineMalfunctionMessage, machineWorkingMessage, isFunctioning, timesUsed);
+			TimesUsed = 0;
+			Type = type;
+			Brand = brand;
+			IsFunctioning = isFunctioning;
 		}
 
-		protected bool WillItBreak(string machine, string sound, bool IsFunctioning, int TimesUsed)
+		public KitchenAppliance()
 		{
-			if (IsFunctioning)
+
+		}
+
+		public virtual KitchenAppliance Use(KitchenAppliance appl)
+		{
+			string machineMalfunctionMessage = "\t\t*maskinen funkar inte*";
+			string machineWorkingMessage = "\t\t*maskinen funkar*";
+			return appl = WillItBreak(machineMalfunctionMessage, machineWorkingMessage, appl);
+		}
+
+		protected KitchenAppliance WillItBreak(string machine, string sound, KitchenAppliance appl)
+		{
+			if (appl.IsFunctioning)
 			{
-				TimesUsed++;
 				Random rnd = new Random();
-				if (TimesUsed > rnd.Next(1, 2))
+				if (appl.TimesUsed > rnd.Next(1, 2))
 				{
-					Console.WriteLine(machine);
-					return false;
+					Console.WriteLine("\t\t" + machine);
+					appl.IsFunctioning = false;
+					return appl;
 				}
 				else
 				{
-					Console.WriteLine(sound);					
-					return true;
+					Console.WriteLine("\t\t" + sound);					
+					return appl;
 				}
 			}
 			else
 			{
 				RepairMessage();
-				return false;
+				return appl;
 			}
 		}
 		private void RepairMessage()
 		{
-			Console.WriteLine("Apparaten är trasig, kontakta en reparatör");
+			Console.WriteLine("\t\tApparaten är trasig, kontakta en reparatör");
 		}
 	}
 }
