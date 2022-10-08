@@ -13,15 +13,15 @@ namespace Labb_2_OOP_Kitchen
 		
 		public void Run()
 		{
-			Oven oven = new Oven("Oven", "Bosch", true);
+			Oven oven = new Oven("Oven", "Bosch", false);
 			saveAppliance.KitchenApplianceList.Add(oven);
 			Stove stove = new Stove("Stove", "Siemens", true);
 			saveAppliance.KitchenApplianceList.Add(stove);
-			Toaster toaster = new Toaster("Toaster", "OBH Nordica", false);
+			Toaster toaster = new Toaster("Toaster", "OBH Nordica", true);
 			saveAppliance.KitchenApplianceList.Add(toaster);
 			Microwave microwave = new Microwave("Microwave", "Samsung", true);
 			saveAppliance.KitchenApplianceList.Add(microwave);
-			OtherAppliance otherAppliance = new OtherAppliance("Other", "Elvisp", "Braun", true);
+			OtherAppliance otherAppliance = new OtherAppliance("Other", "Elvisp", "Braun", false);
 			saveAppliance.KitchenApplianceList.Add(otherAppliance);
 			EnteringKitchen();
 		}
