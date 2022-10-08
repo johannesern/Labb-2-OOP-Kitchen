@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Labb_2_OOP_Kitchen.Appliances;
 
 namespace Labb_2_OOP_Kitchen
 {
@@ -12,7 +13,7 @@ namespace Labb_2_OOP_Kitchen
 		{
 			Console.WriteLine("\n\t\tIndex\tTyp\t\tMärke\t\tFungerar?");
 			int counter = 1;
-			foreach (IKitchenAppliance appliance in applianceList)
+			foreach (KitchenAppliance appliance in applianceList)
 			{
 				string works = "";
 				if (appliance.IsFunctioning)
@@ -25,27 +26,27 @@ namespace Labb_2_OOP_Kitchen
 				}
 				Console.WriteLine();
 				Console.Write("\t\t" + counter);
-				if (appliance.Type.Length < 8 && appliance.Brand.Length < 8)
+				if (appliance.SweType.Length < 8 && appliance.Brand.Length < 8)
 				{
-					Console.Write("\t" + appliance.Type +
+					Console.Write("\t" + appliance.SweType +
 								  "\t\t" + appliance.Brand + 
 								  "\t\t" + works);
 				}
-				else if (appliance.Type.Length > 7 && appliance.Brand.Length > 7)
+				else if (appliance.SweType.Length > 7 && appliance.Brand.Length > 7)
 				{
-					Console.Write("\t" + appliance.Type +
+					Console.Write("\t" + appliance.SweType +
 								  "\t" + appliance.Brand +
-								  "\t\t" + works);
+								  "\t" + works);
 				}
-				else if (appliance.Type.Length < 8 && appliance.Brand.Length > 7)
+				else if (appliance.SweType.Length < 8 && appliance.Brand.Length > 7)
 				{
-					Console.Write("\t" + appliance.Type +
+					Console.Write("\t" + appliance.SweType +
 								  "\t\t" + appliance.Brand +
 								  "\t" + works);
 				}
 				else
 				{
-					Console.Write("\t" + appliance.Type +
+					Console.Write("\t" + appliance.SweType +
 								  "\t" + appliance.Brand +
 								  "\t\t" + works);
 				}
@@ -53,7 +54,7 @@ namespace Labb_2_OOP_Kitchen
 			}
 			Console.WriteLine();
 		}
-
+		
 		public static int DefiningInt()
 		{
 			string input = Console.ReadLine();

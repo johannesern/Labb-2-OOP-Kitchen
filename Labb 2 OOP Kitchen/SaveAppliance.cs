@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
+using Labb_2_OOP_Kitchen.Appliances;
 
 namespace Labb_2_OOP_Kitchen
 {
@@ -60,11 +62,6 @@ namespace Labb_2_OOP_Kitchen
 					}
 			}
 		}
-
-		public void AddApplianceToList(KitchenAppliance appliance)
-		{
-			KitchenApplianceList.Add(appliance);
-		}
 		private void AddMicrowave()
 		{
 			string type = "Mikrovågsugn";
@@ -99,10 +96,16 @@ namespace Labb_2_OOP_Kitchen
 		}
 		private void AddOther()
 		{
-			string type = SettingMachineType();
+			string type = "Other";
 			string brand = SettingMachineBrand();
+			string userInputType = SettingMachineType();
 			bool isFunctioning = SettingMachineCondition();
-			KitchenAppliance newAppl = new KitchenAppliance(type, brand, isFunctioning);
+			OtherAppliance otherAppliance = new OtherAppliance(type, userInputType, brand, isFunctioning);
+			AddApplianceToList(otherAppliance);
+		}
+		public void AddApplianceToList(KitchenAppliance appliance)
+		{
+			KitchenApplianceList.Add(appliance);
 		}
 		public bool SettingMachineCondition()
 		{
@@ -175,11 +178,12 @@ namespace Labb_2_OOP_Kitchen
 			Console.WriteLine("\n\t\tVilken apparat vill du ta bort? (Skriv in ett heltal)");
 			Console.Write("\t\t- ");
 			int applianceIndex = Utility.DefiningInt() - 1;
+			bool flag = false;
 			try
 			{
 				Console.WriteLine("\t\tÄr du säker på att du vill ta bort\n" +
-							  "\t\t" + KitchenApplianceList[applianceIndex].Type +
-							  "\t" + KitchenApplianceList[applianceIndex].Brand);
+								  "\t\t" + KitchenApplianceList[applianceIndex].Type +
+								  "\t" + KitchenApplianceList[applianceIndex].Brand);
 				Console.WriteLine("\t\t[1] Ja [2] Nej");
 				Console.Write("\t\t- ");
 				string removeOrNot = Console.ReadLine();
@@ -191,14 +195,21 @@ namespace Labb_2_OOP_Kitchen
 				{
 					Console.WriteLine("\t\tInget borttaget, tryck på valfri knapp för att återgå till huvudmenyn.");
 					Console.Write("\t\t- ");
-					Console.ReadKey();
 				}
 			}
 			catch(Exception ex)
 			{
+				flag = true;
 				Console.WriteLine("\t\tFelaktig inmatning, försök igen.");
-				Console.Write("\t\t- ");
-				Console.ReadKey();
+				Console.Write("\t\t- ");				
+			}
+			finally
+			{
+				if (flag)
+				{
+					Console.Clear();
+					RemoveAppliance();
+				}
 			}
 		}
 		private void RemovingApplianceFromList(int applianceIndex)
@@ -219,9 +230,6 @@ namespace Labb_2_OOP_Kitchen
 				{
 					Console.Clear();
 					RemoveAppliance();
-				}
-				else
-				{
 				}
 			}
 		}

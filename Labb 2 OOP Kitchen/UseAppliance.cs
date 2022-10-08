@@ -4,6 +4,7 @@ using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
+using Labb_2_OOP_Kitchen.Appliances;
 
 namespace Labb_2_OOP_Kitchen
 {
@@ -23,47 +24,46 @@ namespace Labb_2_OOP_Kitchen
 					case "Toaster":
 						{
 							Toaster toaster = new Toaster();
-							applianceList[applianceIndex].TimesUsed++;
 							toaster.Use(applianceList[applianceIndex]);
+							applianceList[applianceIndex].TimesUsed++;
 							run = false;
 							break;
 						}
 					case "Stove":
 						{
 							Stove stove = new Stove();
-							applianceList[applianceIndex].TimesUsed++;
 							stove.Use(applianceList[applianceIndex]);
-							//stove.Use(applianceList[applianceIndex].TimesUsed, applianceList[applianceIndex].IsFunctioning);
+							applianceList[applianceIndex].TimesUsed++;
 							run = false;
 							break;
 						}
 					case "Microwave":
 						{
 							Microwave microwave = new Microwave();
+							microwave.Use(applianceList[applianceIndex]);
 							applianceList[applianceIndex].TimesUsed++;
-							//microwave.Use(applianceList[applianceIndex].TimesUsed, applianceList[applianceIndex].IsFunctioning);
 							run = false;
 							break;
 						}
 					case "Oven":
 						{
 							Oven oven = new Oven();
+							oven.Use(applianceList[applianceIndex]);
 							applianceList[applianceIndex].TimesUsed++;
-							//oven.Use(applianceList[applianceIndex].TimesUsed, applianceList[applianceIndex].IsFunctioning);
 							run = false;
 							break;
 						}
 					case "Other":
 						{
-							//Other oven = new Other();
-							//applianceList[applianceIndex].TimesUsed++;
-							//toaster.Use(applianceList[applianceIndex].TimesUsed, applianceList[applianceIndex].IsFunctioning);
+							KitchenAppliance otherAppliance = new OtherAppliance();
+							otherAppliance.Use(applianceList[applianceIndex]);
+							applianceList[applianceIndex].TimesUsed++;
 							run = false;
 							break;
 						}
 					default:
 						{
-							Console.WriteLine("Apparaten finns inte försök igen.");
+							Console.WriteLine("\n\t\tApparaten finns inte försök igen.");
 							break;
 						}
 				}

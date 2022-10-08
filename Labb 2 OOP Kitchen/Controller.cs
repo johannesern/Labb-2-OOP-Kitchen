@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Labb_2_OOP_Kitchen.Appliances;
 
 namespace Labb_2_OOP_Kitchen
 {
 	internal class Controller
 	{
 		public static SaveAppliance saveAppliance = new SaveAppliance();
+		public static OtherAppliance OtherAppliance = new OtherAppliance();
 		public static Microwave Microwave = new Microwave();
 		public static Toaster Toaster = new Toaster();
 		public static Stove Stove = new Stove();
@@ -20,10 +22,12 @@ namespace Labb_2_OOP_Kitchen
 			saveAppliance.KitchenApplianceList.Add(Oven);
 			Stove = new Stove("Stove", "Siemens", true);
 			saveAppliance.KitchenApplianceList.Add(Stove);
-			Toaster = new Toaster("Toaster", "OBH Nordica", true);
+			Toaster = new Toaster("Toaster", "OBH Nordica", false);
 			saveAppliance.KitchenApplianceList.Add(Toaster);
 			Microwave = new Microwave("Microwave", "Samsung", true);
 			saveAppliance.KitchenApplianceList.Add(Microwave);
+			OtherAppliance = new OtherAppliance("Other", "Elvisp", "Braun", true);
+			saveAppliance.KitchenApplianceList.Add(OtherAppliance);
 			EnteringKitchen();
 		}
 		public static void EnteringKitchen()
@@ -32,7 +36,6 @@ namespace Labb_2_OOP_Kitchen
 			while (showMenu)
 			{
 				Console.Clear();
-				Utility.PrintingOutAllAppliances(saveAppliance.KitchenApplianceList);
 				Console.WriteLine("\n\t\t========== KÖKET ==========\n" +
 								  "\n\t\tVad vill du göra?\n" +
 								  "\t\t[1] Använda en köksapparat\n" +
@@ -42,25 +45,29 @@ namespace Labb_2_OOP_Kitchen
 								  "\t\t[5] Gå ut ur köket\n");
 				Console.Write("\t\t- ");
 				string choice = Console.ReadLine();
-				showMenu = MenuChoice(choice);
+				CheckingIfListIsEmpty(choice);
 			}
 		}
+		private static void CheckingIfListIsEmpty(string choice)
+		{
+			if (saveAppliance.KitchenApplianceList.Count == 0)
+			{
+				Console.WriteLine("\t\tListan är tom. Börja med att lägga till några köksredskap.");
+			}
+			else
+			{
+				MenuChoice(choice);
+			}
+		}
+
 		public static bool MenuChoice(string choice)
 		{
 			switch (choice)
 			{
 				case "1":
 					//Använda köksapparat
-					if (saveAppliance.KitchenApplianceList.Count == 0)
-					{
-						Console.WriteLine("\t\tListan är tom. Börja med att lägga till några köksredskap.");
-						Console.Write("\t\t- ");
-					}
-					else
-					{
-						UseAppliance useAppliance = new UseAppliance();
-						saveAppliance.KitchenApplianceList = useAppliance.UseAppl(saveAppliance.KitchenApplianceList);
-					}
+					UseAppliance useAppliance = new UseAppliance();
+					saveAppliance.KitchenApplianceList = useAppliance.UseAppl(saveAppliance.KitchenApplianceList);
 					Console.Write("\t\t- ");
 					Console.ReadKey();
 					return true;
@@ -70,28 +77,13 @@ namespace Labb_2_OOP_Kitchen
 					return true;
 				case "3":
 					//Lista alla apparater
-					if(saveAppliance.KitchenApplianceList.Count == 0)
-					{
-						Console.WriteLine("\t\tListan är tom. Börja med att lägga till några köksredskap.");						
-					}
-					else
-					{
-						Utility.PrintingOutAllAppliances(saveAppliance.KitchenApplianceList);
-					}
+					Utility.PrintingOutAllAppliances(saveAppliance.KitchenApplianceList);
 					Console.Write("\t\t- ");
 					Console.ReadKey();
 					return true;
 				case "4":
 					//Ta bort apparat
-					if (saveAppliance.KitchenApplianceList.Count == 0)
-					{
-						Console.WriteLine("\t\tListan är tom. Börja med att lägga till några köksredskap.");
-						Console.Write("\t\t- ");
-					}
-					else
-					{
-						saveAppliance.RemoveAppliance();
-					}
+					saveAppliance.RemoveAppliance();
 					Console.ReadKey();
 					return true;
 				case "5":
