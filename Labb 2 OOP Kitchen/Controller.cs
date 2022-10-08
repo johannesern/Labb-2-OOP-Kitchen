@@ -61,7 +61,7 @@ namespace Labb_2_OOP_Kitchen
 					{
 						if(choice == "2" || choice == "6")
 						{
-							MenuChoice(choice);
+							showMenu = MenuChoice(choice);
 						}
 						else
 						{
