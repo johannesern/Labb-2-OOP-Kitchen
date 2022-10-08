@@ -10,11 +10,11 @@ namespace Labb_2_OOP_Kitchen.Appliances
     {
         public OtherAppliance(string type, string userInputType, string brand, bool isFunctioning) : base(type, brand, isFunctioning)
         {
-            Type = type;
-            Brand = brand;
+			TimesUsed = AroundTheCornerWarranty();
+			Type = type;
+			Brand = brand;
             SweType = userInputType;
             IsFunctioning = isFunctioning;
-            TimesUsed = 0;
         }
         public OtherAppliance()
         {

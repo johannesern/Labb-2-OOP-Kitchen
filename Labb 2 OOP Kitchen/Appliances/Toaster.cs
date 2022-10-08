@@ -10,11 +10,11 @@ namespace Labb_2_OOP_Kitchen.Appliances
     {
         public Toaster(string type, string brand, bool isFunctioning) : base(type, brand, isFunctioning)
         {
-            TimesUsed = 5;
-            Type = type;
-			SweType = TranslateType(Type);
+            TimesUsed = AroundTheCornerWarranty();
+			Type = type;
 			Brand = brand;
-            IsFunctioning = isFunctioning;
+			SweType = TranslateType(Type);
+			IsFunctioning = isFunctioning;
         }
         public Toaster()
         {
@@ -24,17 +24,17 @@ namespace Labb_2_OOP_Kitchen.Appliances
             if (appl.IsFunctioning)
             {
                 Random rnd = new Random();
-                int i = rnd.Next(1, 2);
+                int i = rnd.Next(1, 3);
                 Console.WriteLine(i);
                 if (appl.TimesUsed > i)
                 {
-                    appl.IsFunctioning = false;
+					appl.IsFunctioning = false;
                     Console.WriteLine("\t\tKAFRÄÄääS!");
-                    Thread.Sleep(500);
+                    Thread.Sleep(2000);
                     Console.Clear();
                     Console.ForegroundColor = ConsoleColor.DarkGray;
                     Console.WriteLine("\n\t\thuvudsäkringen gick...");
-                    Thread.Sleep(5000);
+                    Utility.LoadingBar();
                     Console.WriteLine("\t\tByt huvudsäkring? [1] Ja [2] Nej");
                     Console.Write("\t\t- ");
                     string input = Console.ReadLine();
@@ -42,13 +42,13 @@ namespace Labb_2_OOP_Kitchen.Appliances
                     {
                         Console.ForegroundColor = ConsoleColor.White;
                         Console.WriteLine("\t\tSådärja! Återgår strax till menyn");
-                        Thread.Sleep(2000);
+                        Utility.LoadingBar();
                         return appl;
                     }
                     else
                     {
                         Console.WriteLine("\t\tNehe, då får det bli mörkt");
-                        Thread.Sleep(5000);
+                        Utility.LoadingBar();
                         Console.ForegroundColor = ConsoleColor.White;
                         return appl;
                     }
@@ -61,8 +61,10 @@ namespace Labb_2_OOP_Kitchen.Appliances
             }
             else
             {
-                Console.WriteLine("\t\tApparaten är trasig, kontakta en reparatör");
-                return appl;
+				Console.ForegroundColor = ConsoleColor.Yellow;
+				Console.WriteLine("\t\tApparaten är trasig, kontakta en reparatör");
+				Console.ForegroundColor = ConsoleColor.White;
+				return appl;
             }
         }
     }

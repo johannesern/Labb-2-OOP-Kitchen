@@ -10,11 +10,11 @@ namespace Labb_2_OOP_Kitchen.Appliances
     {
         public Microwave(string type, string brand, bool isFunctioning) : base(type, brand, isFunctioning)
         {
-            TimesUsed = 5;
+            TimesUsed = AroundTheCornerWarranty();
             Type = type;
-            SweType = TranslateType(Type);
             Brand = brand;
-            IsFunctioning = isFunctioning;
+			SweType = TranslateType(Type);
+			IsFunctioning = isFunctioning;
         }
         public Microwave()
         {

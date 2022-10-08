@@ -24,7 +24,7 @@ namespace Labb_2_OOP_Kitchen.Appliances
 
         public KitchenAppliance(string type, string brand, bool isFunctioning)
         {
-            TimesUsed = 0;
+            TimesUsed = AroundTheCornerWarranty();
             Type = type;
             SweType = TranslateType(type);
             Brand = brand;
@@ -37,26 +37,30 @@ namespace Labb_2_OOP_Kitchen.Appliances
 
         public virtual KitchenAppliance Use(KitchenAppliance appl)
         {
-            string machineMalfunctionMessage = "\t\t*maskinen funkar inte*";
-            string machineWorkingMessage = "\t\t*maskinen funkar*";
+            string machineMalfunctionMessage = "*maskinen funkar inte*";
+            string machineWorkingMessage = "*maskinen funkar*";
             return WillItBreak(machineMalfunctionMessage, machineWorkingMessage, appl);
         }
 
-        protected KitchenAppliance WillItBreak(string machine, string sound, KitchenAppliance appl)
+        protected KitchenAppliance WillItBreak(string machineMalfunctionMessage, string machineWorkingMessage, KitchenAppliance appl)
         {
             if (appl.IsFunctioning)
             {
                 Random rnd = new Random();
-                if (appl.TimesUsed > rnd.Next(1, 2))
+                if (appl.TimesUsed > rnd.Next(1, 5))
                 {
-                    Console.WriteLine("\t\t" + machine);
-                    appl.IsFunctioning = false;
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.WriteLine("\n\t\t" + machineMalfunctionMessage);
+					Console.ForegroundColor = ConsoleColor.White;
+					appl.IsFunctioning = false;
                     return appl;
                 }
                 else
                 {
-                    Console.WriteLine("\t\t" + sound);
-                    return appl;
+					Console.ForegroundColor = ConsoleColor.Green;
+					Console.WriteLine("\n\t\t" + machineWorkingMessage);
+					Console.ForegroundColor = ConsoleColor.White;
+					return appl;
                 }
             }
             else
@@ -67,8 +71,10 @@ namespace Labb_2_OOP_Kitchen.Appliances
         }
         private void RepairMessage()
         {
-            Console.WriteLine("\t\tApparaten är trasig, kontakta en reparatör");
-        }
+			Console.ForegroundColor = ConsoleColor.Yellow;
+			Console.WriteLine("\n\t\tApparaten är trasig, kontakta en reparatör");
+			Console.ForegroundColor = ConsoleColor.White;
+		}
 		protected string TranslateType(string type)
 		{
 			string SweType = "";
@@ -76,26 +82,31 @@ namespace Labb_2_OOP_Kitchen.Appliances
 			{
 				case "Toaster":
 					{
-						return "Brödrost";
+						return SweType =  "Brödrost";
 					}
 				case "Microwave":
 					{
-						return "Mikrovågsugn";
+						return SweType = "Mikrovågsugn";
 					}
 				case "Oven":
 					{
-						return "Ugn";
+						return SweType = "Ugn";
 					}
 				case "Stove":
 					{
-						return "Spis/Häll";
+						return SweType = "Spis/Häll";
 					}
 				case "Other":
 					{
-						return "Annan";
+						return SweType = "Annan";
 					}
 			}
 			return SweType;
 		}
+        protected int AroundTheCornerWarranty()
+        {
+            Random random = new Random();
+            return random.Next(1, 5);
+        }
 	}
 }

@@ -9,95 +9,155 @@ namespace Labb_2_OOP_Kitchen
 {
 	internal class Controller
 	{
-		public static SaveAppliance saveAppliance = new SaveAppliance();
-		public static OtherAppliance OtherAppliance = new OtherAppliance();
-		public static Microwave Microwave = new Microwave();
-		public static Toaster Toaster = new Toaster();
-		public static Stove Stove = new Stove();
-		public static Oven Oven = new Oven();
-
+		protected static SaveAppliance saveAppliance = new SaveAppliance();
+		
 		public void Run()
 		{
-			Oven = new Oven("Oven", "Bosch", true);
-			saveAppliance.KitchenApplianceList.Add(Oven);
-			Stove = new Stove("Stove", "Siemens", true);
-			saveAppliance.KitchenApplianceList.Add(Stove);
-			Toaster = new Toaster("Toaster", "OBH Nordica", false);
-			saveAppliance.KitchenApplianceList.Add(Toaster);
-			Microwave = new Microwave("Microwave", "Samsung", true);
-			saveAppliance.KitchenApplianceList.Add(Microwave);
-			OtherAppliance = new OtherAppliance("Other", "Elvisp", "Braun", true);
-			saveAppliance.KitchenApplianceList.Add(OtherAppliance);
+			Oven oven = new Oven("Oven", "Bosch", true);
+			saveAppliance.KitchenApplianceList.Add(oven);
+			Stove stove = new Stove("Stove", "Siemens", true);
+			saveAppliance.KitchenApplianceList.Add(stove);
+			Toaster toaster = new Toaster("Toaster", "OBH Nordica", false);
+			saveAppliance.KitchenApplianceList.Add(toaster);
+			Microwave microwave = new Microwave("Microwave", "Samsung", true);
+			saveAppliance.KitchenApplianceList.Add(microwave);
+			OtherAppliance otherAppliance = new OtherAppliance("Other", "Elvisp", "Braun", true);
+			saveAppliance.KitchenApplianceList.Add(otherAppliance);
 			EnteringKitchen();
 		}
-		public static void EnteringKitchen()
+		private static void EnteringKitchen()
 		{
 			bool showMenu = true;
 			while (showMenu)
 			{
 				Console.Clear();
+				Utility.PrintingOutAllAppliances(saveAppliance.KitchenApplianceList);
 				Console.WriteLine("\n\t\t========== KÖKET ==========\n" +
 								  "\n\t\tVad vill du göra?\n" +
 								  "\t\t[1] Använda en köksapparat\n" +
 								  "\t\t[2] Lägg till köksapparat\n" +
 								  "\t\t[3] Lista köksapparater\n" +
 								  "\t\t[4] Ta bort en köksapparat\n" +
-								  "\t\t[5] Gå ut ur köket\n");
+								  "\t\t[5] Reparera maskinerna\n" +
+								  "\t\t[6] Gå ut ur köket");
 				Console.Write("\t\t- ");
-				string choice = Console.ReadLine();
-				CheckingIfListIsEmpty(choice);
+				bool flag = false;
+				string choice = "";
+				try
+				{
+					choice = Console.ReadLine();
+				}
+				catch (Exception ex)
+				{
+					flag = true;
+					Console.WriteLine("\t\tFelaktig inmatning, försök igen.");
+				}
+				finally
+				{
+					if (flag)
+					{
+						EnteringKitchen();
+					}
+					else
+					{
+						showMenu = CheckingIfListIsEmpty(choice);
+					}
+				}
 			}
 		}
-		private static void CheckingIfListIsEmpty(string choice)
+		private static bool CheckingIfListIsEmpty(string choice)
 		{
 			if (saveAppliance.KitchenApplianceList.Count == 0)
 			{
 				Console.WriteLine("\t\tListan är tom. Börja med att lägga till några köksredskap.");
+				return true;
 			}
 			else
 			{
-				MenuChoice(choice);
+				return MenuChoice(choice);
 			}
 		}
-
-		public static bool MenuChoice(string choice)
+		private static bool MenuChoice(string choice)
 		{
 			switch (choice)
 			{
 				case "1":
 					//Använda köksapparat
-					UseAppliance useAppliance = new UseAppliance();
-					saveAppliance.KitchenApplianceList = useAppliance.UseAppl(saveAppliance.KitchenApplianceList);
-					Console.Write("\t\t- ");
-					Console.ReadKey();
+					UseAppliance();
 					return true;
 				case "2":
 					//Lägga till apparat
-					saveAppliance.NewAppliance();
+					AddAppliance();
 					return true;
 				case "3":
 					//Lista alla apparater
-					Utility.PrintingOutAllAppliances(saveAppliance.KitchenApplianceList);
-					Console.Write("\t\t- ");
-					Console.ReadKey();
+					ListAllAppliances();
 					return true;
 				case "4":
 					//Ta bort apparat
-					saveAppliance.RemoveAppliance();
-					Console.ReadKey();
+					_RemoveAppliance();
 					return true;
 				case "5":
 					//Avsluta programmet
-					Console.WriteLine("\t\tDu går ut ur köket.");
-					Console.ReadKey();
+					RepairMachines();
+					return true;
+				case "6":
+					//Avsluta programmet
+					CloseProgram();
 					return false;
 				default:
 					//Vid felaktigt val skicka tillbaka användaren till menyn
-					Console.WriteLine("\t\tFelaktigt val försök igen.");
-					Console.Write("\t\t- ");
-					Console.ReadKey();
+					DefaultErrorMessage();
 					return true;
 			}
+		}
+		private static void UseAppliance()
+		{
+			UseAppliance useAppliance = new UseAppliance();
+			saveAppliance.KitchenApplianceList = useAppliance.UseAppl(saveAppliance.KitchenApplianceList);
+		}
+		private static void AddAppliance()
+		{
+			saveAppliance.NewAppliance();
+			Utility.EndOfMethod();
+			Console.ReadKey();
+		}
+		private static void ListAllAppliances()
+		{
+			Console.Clear();
+			Console.WriteLine("\n\t\t========== APPARATLISTA ==========");
+			Utility.PrintingOutAllAppliances(saveAppliance.KitchenApplianceList);
+			Console.WriteLine();
+			Utility.EndOfMethod();
+			Console.ReadKey();
+		}
+		private static void _RemoveAppliance()
+		{
+			saveAppliance.KitchenApplianceList = RemoveAppliance.RemovingAppliance(saveAppliance.KitchenApplianceList);
+			Console.ReadKey();
+		}
+		private static void CloseProgram()
+		{
+			Console.WriteLine("\t\tDu går ut ur köket.");
+			Console.ReadKey();
+		}
+		private static void RepairMachines()
+		{
+			foreach(KitchenAppliance appl in saveAppliance.KitchenApplianceList)
+			{
+				appl.IsFunctioning = true;
+			}
+			Console.ForegroundColor = ConsoleColor.Green;
+			Console.WriteLine("\n\t\tAlla maskiner är lagade!");
+			Utility.EndOfMethod();
+			Console.ForegroundColor = ConsoleColor.White;
+			Console.ReadKey();
+		}
+		private static void DefaultErrorMessage()
+		{
+			Console.WriteLine("\t\tFelaktigt val försök igen.");
+			Console.Write("\t\t- ");
+			Console.ReadKey();
 		}
 	}
 }

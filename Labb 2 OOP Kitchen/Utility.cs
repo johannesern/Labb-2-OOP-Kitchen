@@ -72,7 +72,6 @@ namespace Labb_2_OOP_Kitchen
 					Console.WriteLine("\t\tDet där var inte ett heltal, försök igen.");
 					Console.Write("\t\t- ");
 					input = Console.ReadLine();
-
 				}
 			} while (run);
 
@@ -83,11 +82,17 @@ namespace Labb_2_OOP_Kitchen
 		{
 			Console.WriteLine();
 			Console.Write("\t\t");
-			for (int i = 0; i < 30; i++)
+			for (int i = 0; i < 25; i++)
 			{
 				Console.Write("= ");
 				Thread.Sleep(200);
 			}
+			Console.WriteLine();
+		}
+
+		public static void EndOfMethod()
+		{
+			Console.WriteLine("\t\tTryck på valfri knapp för att återgå till huvudmenyn.");			
 		}
 	}
 }

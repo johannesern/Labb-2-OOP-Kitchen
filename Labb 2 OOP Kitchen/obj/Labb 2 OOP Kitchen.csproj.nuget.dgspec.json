@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\johan\\Desktop\\ITHS\\Inlämningsuppgifter\\Lab 2\\Lab 2 - OOP Köket\\Labb 2 OOP Kitchen\\Labb 2 OOP Kitchen.csproj": {}
+    "C:\\Users\\Johannes\\Desktop\\ITHS till github\\New folder\\Labb-2-OOP-Kitchen\\Labb 2 OOP Kitchen\\Labb 2 OOP Kitchen.csproj": {}
   },
   "projects": {
-    "C:\\Users\\johan\\Desktop\\ITHS\\Inlämningsuppgifter\\Lab 2\\Lab 2 - OOP Köket\\Labb 2 OOP Kitchen\\Labb 2 OOP Kitchen.csproj": {
+    "C:\\Users\\Johannes\\Desktop\\ITHS till github\\New folder\\Labb-2-OOP-Kitchen\\Labb 2 OOP Kitchen\\Labb 2 OOP Kitchen.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\johan\\Desktop\\ITHS\\Inlämningsuppgifter\\Lab 2\\Lab 2 - OOP Köket\\Labb 2 OOP Kitchen\\Labb 2 OOP Kitchen.csproj",
+        "projectUniqueName": "C:\\Users\\Johannes\\Desktop\\ITHS till github\\New folder\\Labb-2-OOP-Kitchen\\Labb 2 OOP Kitchen\\Labb 2 OOP Kitchen.csproj",
         "projectName": "Labb 2 OOP Kitchen",
-        "projectPath": "C:\\Users\\johan\\Desktop\\ITHS\\Inlämningsuppgifter\\Lab 2\\Lab 2 - OOP Köket\\Labb 2 OOP Kitchen\\Labb 2 OOP Kitchen.csproj",
-        "packagesPath": "C:\\Users\\johan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\johan\\Desktop\\ITHS\\Inlämningsuppgifter\\Lab 2\\Lab 2 - OOP Köket\\Labb 2 OOP Kitchen\\obj\\",
+        "projectPath": "C:\\Users\\Johannes\\Desktop\\ITHS till github\\New folder\\Labb-2-OOP-Kitchen\\Labb 2 OOP Kitchen\\Labb 2 OOP Kitchen.csproj",
+        "packagesPath": "C:\\Users\\Johannes\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Johannes\\Desktop\\ITHS till github\\New folder\\Labb-2-OOP-Kitchen\\Labb 2 OOP Kitchen\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\johan\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Johannes\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
