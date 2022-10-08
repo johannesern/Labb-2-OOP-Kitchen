@@ -21,6 +21,7 @@ namespace Labb_2_OOP_Kitchen.Appliances
         }
         public override KitchenAppliance Use(KitchenAppliance appl)
         {
+            appl.TimesUsed++;
             if (appl.IsFunctioning)
             {
                 Random rnd = new Random();

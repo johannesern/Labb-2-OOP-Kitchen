@@ -44,7 +44,7 @@ namespace Labb_2_OOP_Kitchen
 			{
 				flag = true;
 				Console.WriteLine("\t\tFelaktig inmatning, försök igen.");
-				Utility.LoadingBar();
+				Console.ReadKey();
 			}
 			finally
 			{

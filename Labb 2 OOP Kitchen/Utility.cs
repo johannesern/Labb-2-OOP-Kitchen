@@ -69,7 +69,7 @@ namespace Labb_2_OOP_Kitchen
 				}
 				else
 				{
-					Console.WriteLine("\t\tDet där var inte ett heltal, försök igen.");
+					Console.WriteLine("\t\tFelaktig inmatning, försök igen.");
 					Console.Write("\t\t- ");
 					input = Console.ReadLine();
 				}

@@ -44,6 +44,7 @@ namespace Labb_2_OOP_Kitchen.Appliances
 
         protected KitchenAppliance WillItBreak(string machineMalfunctionMessage, string machineWorkingMessage, KitchenAppliance appl)
         {
+            appl.TimesUsed++;
             if (appl.IsFunctioning)
             {
                 Random rnd = new Random();

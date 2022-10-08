@@ -134,7 +134,7 @@ namespace Labb_2_OOP_Kitchen
 			{
 				Console.Write("\t\tApparat-typ: ");
 				type = Console.ReadLine();
-				if (String.IsNullOrEmpty(type))
+				if (String.IsNullOrWhiteSpace(type))
 				{
 					Console.WriteLine("\t\tFälten får inte lämnas tomma, försök igen.");
 				}
@@ -153,7 +153,7 @@ namespace Labb_2_OOP_Kitchen
 			{
 				Console.Write("\t\tMärke: ");
 				brand = Console.ReadLine();
-				if (String.IsNullOrEmpty(brand))
+				if (String.IsNullOrWhiteSpace(brand))
 				{
 					Console.WriteLine("\t\tFältet får inte lämnas tomma, försök igen.");
 				}

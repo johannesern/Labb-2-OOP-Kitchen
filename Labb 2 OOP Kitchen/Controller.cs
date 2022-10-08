@@ -31,7 +31,6 @@ namespace Labb_2_OOP_Kitchen
 			while (showMenu)
 			{
 				Console.Clear();
-				Utility.PrintingOutAllAppliances(saveAppliance.KitchenApplianceList);
 				Console.WriteLine("\n\t\t========== KÖKET ==========\n" +
 								  "\n\t\tVad vill du göra?\n" +
 								  "\t\t[1] Använda en köksapparat\n" +
@@ -60,7 +59,14 @@ namespace Labb_2_OOP_Kitchen
 					}
 					else
 					{
-						showMenu = CheckingIfListIsEmpty(choice);
+						if(choice == "2" || choice == "6")
+						{
+							MenuChoice(choice);
+						}
+						else
+						{
+							showMenu = CheckingIfListIsEmpty(choice);
+						}
 					}
 				}
 			}
@@ -69,7 +75,8 @@ namespace Labb_2_OOP_Kitchen
 		{
 			if (saveAppliance.KitchenApplianceList.Count == 0)
 			{
-				Console.WriteLine("\t\tListan är tom. Börja med att lägga till några köksredskap.");
+				Console.WriteLine("\n\t\tListan är tom. Börja med att lägga till några köksredskap.");
+				Console.ReadKey();
 				return true;
 			}
 			else
@@ -149,8 +156,8 @@ namespace Labb_2_OOP_Kitchen
 			}
 			Console.ForegroundColor = ConsoleColor.Green;
 			Console.WriteLine("\n\t\tAlla maskiner är lagade!");
-			Utility.EndOfMethod();
 			Console.ForegroundColor = ConsoleColor.White;
+			Utility.EndOfMethod();
 			Console.ReadKey();
 		}
 		private static void DefaultErrorMessage()
