@@ -9,10 +9,12 @@ namespace Labb_2_OOP_Kitchen
 {
 	internal class Controller
 	{
+		//Listan som används genom programmet ligger i Saveappliance-klassen.
 		protected static SaveAppliance saveAppliance = new SaveAppliance();
 		
 		public void Run()
 		{
+			//Skapar upp ett antal objekt att använda direkt.
 			Oven oven = new Oven("Oven", "Bosch", false);
 			saveAppliance.KitchenApplianceList.Add(oven);
 			Stove stove = new Stove("Stove", "Siemens", true);
@@ -25,6 +27,7 @@ namespace Labb_2_OOP_Kitchen
 			saveAppliance.KitchenApplianceList.Add(otherAppliance);
 			EnteringKitchen();
 		}
+
 		private static void EnteringKitchen()
 		{
 			bool showMenu = true;
@@ -40,34 +43,25 @@ namespace Labb_2_OOP_Kitchen
 								  "\t\t[5] Reparera maskinerna\n" +
 								  "\t\t[6] Gå ut ur köket");
 				Console.Write("\t\t- ");
-				bool flag = false;
 				string choice = "";
 				try
 				{
 					choice = Console.ReadLine();
-				}
-				catch (Exception ex)
-				{
-					flag = true;
-					Console.WriteLine("\t\tFelaktig inmatning, försök igen.");
-				}
-				finally
-				{
-					if (flag)
+					
+					if (choice == "2" || choice == "6")
 					{
-						EnteringKitchen();
+						//Val 2 & 6 går att använda utan att kontrollera listans innehåll
+						showMenu = MenuChoice(choice);
 					}
 					else
 					{
-						if(choice == "2" || choice == "6")
-						{
-							showMenu = MenuChoice(choice);
-						}
-						else
-						{
-							showMenu = CheckingIfListIsEmpty(choice);
-						}
+						//Val 1, 3, 4, 5 kollar om listan har något innehåll först
+						showMenu = CheckingIfListIsEmpty(choice);
 					}
+				}
+				catch (Exception ex)
+				{
+					Console.WriteLine("\t\tFelaktig inmatning, försök igen.");
 				}
 			}
 		}
@@ -84,6 +78,9 @@ namespace Labb_2_OOP_Kitchen
 				return MenuChoice(choice);
 			}
 		}
+
+		//Menyvalet skickas in och när metoden är utförd returneras en bool
+		//för om programmet ska köra vidare eller inte.
 		private static bool MenuChoice(string choice)
 		{
 			switch (choice)

@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Johannes\\Desktop\\ITHS till github\\New folder\\Labb-2-OOP-Kitchen\\Labb 2 OOP Kitchen\\Labb 2 OOP Kitchen.csproj",
+      "projectUniqueName": "C:\\Users\\Johannes\\Desktop\\ITHS till github\\Labb2\\Labb-2-OOP-Kitchen\\Labb 2 OOP Kitchen\\Labb 2 OOP Kitchen.csproj",
       "projectName": "Labb 2 OOP Kitchen",
-      "projectPath": "C:\\Users\\Johannes\\Desktop\\ITHS till github\\New folder\\Labb-2-OOP-Kitchen\\Labb 2 OOP Kitchen\\Labb 2 OOP Kitchen.csproj",
+      "projectPath": "C:\\Users\\Johannes\\Desktop\\ITHS till github\\Labb2\\Labb-2-OOP-Kitchen\\Labb 2 OOP Kitchen\\Labb 2 OOP Kitchen.csproj",
       "packagesPath": "C:\\Users\\Johannes\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Johannes\\Desktop\\ITHS till github\\New folder\\Labb-2-OOP-Kitchen\\Labb 2 OOP Kitchen\\obj\\",
+      "outputPath": "C:\\Users\\Johannes\\Desktop\\ITHS till github\\Labb2\\Labb-2-OOP-Kitchen\\Labb 2 OOP Kitchen\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Johannes\\AppData\\Roaming\\NuGet\\NuGet.Config",

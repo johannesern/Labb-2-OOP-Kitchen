@@ -43,3 +43,33 @@ C:\Users\Johannes\Desktop\ITHS till github\New folder\Labb-2-OOP-Kitchen\Labb 2 
 C:\Users\Johannes\Desktop\ITHS till github\New folder\Labb-2-OOP-Kitchen\Labb 2 OOP Kitchen\obj\Debug\net6.0\Labb 2 OOP Kitchen.pdb
 C:\Users\Johannes\Desktop\ITHS till github\New folder\Labb-2-OOP-Kitchen\Labb 2 OOP Kitchen\obj\Debug\net6.0\Labb 2 OOP Kitchen.genruntimeconfig.cache
 C:\Users\Johannes\Desktop\ITHS till github\New folder\Labb-2-OOP-Kitchen\Labb 2 OOP Kitchen\obj\Debug\net6.0\ref\Labb 2 OOP Kitchen.dll
+C:\Users\Johannes\Desktop\New folder\Labb 2 OOP Kitchen\bin\Debug\net6.0\Labb 2 OOP Kitchen.exe
+C:\Users\Johannes\Desktop\New folder\Labb 2 OOP Kitchen\bin\Debug\net6.0\Labb 2 OOP Kitchen.deps.json
+C:\Users\Johannes\Desktop\New folder\Labb 2 OOP Kitchen\bin\Debug\net6.0\Labb 2 OOP Kitchen.runtimeconfig.json
+C:\Users\Johannes\Desktop\New folder\Labb 2 OOP Kitchen\bin\Debug\net6.0\Labb 2 OOP Kitchen.dll
+C:\Users\Johannes\Desktop\New folder\Labb 2 OOP Kitchen\bin\Debug\net6.0\Labb 2 OOP Kitchen.pdb
+C:\Users\Johannes\Desktop\New folder\Labb 2 OOP Kitchen\obj\Debug\net6.0\Labb 2 OOP Kitchen.csproj.AssemblyReference.cache
+C:\Users\Johannes\Desktop\New folder\Labb 2 OOP Kitchen\obj\Debug\net6.0\Labb 2 OOP Kitchen.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Johannes\Desktop\New folder\Labb 2 OOP Kitchen\obj\Debug\net6.0\Labb 2 OOP Kitchen.AssemblyInfoInputs.cache
+C:\Users\Johannes\Desktop\New folder\Labb 2 OOP Kitchen\obj\Debug\net6.0\Labb 2 OOP Kitchen.AssemblyInfo.cs
+C:\Users\Johannes\Desktop\New folder\Labb 2 OOP Kitchen\obj\Debug\net6.0\Labb 2 OOP Kitchen.csproj.CoreCompileInputs.cache
+C:\Users\Johannes\Desktop\New folder\Labb 2 OOP Kitchen\obj\Debug\net6.0\Labb 2 OOP Kitchen.dll
+C:\Users\Johannes\Desktop\New folder\Labb 2 OOP Kitchen\obj\Debug\net6.0\refint\Labb 2 OOP Kitchen.dll
+C:\Users\Johannes\Desktop\New folder\Labb 2 OOP Kitchen\obj\Debug\net6.0\Labb 2 OOP Kitchen.pdb
+C:\Users\Johannes\Desktop\New folder\Labb 2 OOP Kitchen\obj\Debug\net6.0\Labb 2 OOP Kitchen.genruntimeconfig.cache
+C:\Users\Johannes\Desktop\New folder\Labb 2 OOP Kitchen\obj\Debug\net6.0\ref\Labb 2 OOP Kitchen.dll
+C:\Users\Johannes\Desktop\ITHS till github\Labb2\Labb 2 OOP Kitchen\bin\Debug\net6.0\Labb 2 OOP Kitchen.exe
+C:\Users\Johannes\Desktop\ITHS till github\Labb2\Labb 2 OOP Kitchen\bin\Debug\net6.0\Labb 2 OOP Kitchen.deps.json
+C:\Users\Johannes\Desktop\ITHS till github\Labb2\Labb 2 OOP Kitchen\bin\Debug\net6.0\Labb 2 OOP Kitchen.runtimeconfig.json
+C:\Users\Johannes\Desktop\ITHS till github\Labb2\Labb 2 OOP Kitchen\bin\Debug\net6.0\Labb 2 OOP Kitchen.dll
+C:\Users\Johannes\Desktop\ITHS till github\Labb2\Labb 2 OOP Kitchen\bin\Debug\net6.0\Labb 2 OOP Kitchen.pdb
+C:\Users\Johannes\Desktop\ITHS till github\Labb2\Labb 2 OOP Kitchen\obj\Debug\net6.0\Labb 2 OOP Kitchen.csproj.AssemblyReference.cache
+C:\Users\Johannes\Desktop\ITHS till github\Labb2\Labb 2 OOP Kitchen\obj\Debug\net6.0\Labb 2 OOP Kitchen.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Johannes\Desktop\ITHS till github\Labb2\Labb 2 OOP Kitchen\obj\Debug\net6.0\Labb 2 OOP Kitchen.AssemblyInfoInputs.cache
+C:\Users\Johannes\Desktop\ITHS till github\Labb2\Labb 2 OOP Kitchen\obj\Debug\net6.0\Labb 2 OOP Kitchen.AssemblyInfo.cs
+C:\Users\Johannes\Desktop\ITHS till github\Labb2\Labb 2 OOP Kitchen\obj\Debug\net6.0\Labb 2 OOP Kitchen.csproj.CoreCompileInputs.cache
+C:\Users\Johannes\Desktop\ITHS till github\Labb2\Labb 2 OOP Kitchen\obj\Debug\net6.0\Labb 2 OOP Kitchen.dll
+C:\Users\Johannes\Desktop\ITHS till github\Labb2\Labb 2 OOP Kitchen\obj\Debug\net6.0\refint\Labb 2 OOP Kitchen.dll
+C:\Users\Johannes\Desktop\ITHS till github\Labb2\Labb 2 OOP Kitchen\obj\Debug\net6.0\Labb 2 OOP Kitchen.pdb
+C:\Users\Johannes\Desktop\ITHS till github\Labb2\Labb 2 OOP Kitchen\obj\Debug\net6.0\Labb 2 OOP Kitchen.genruntimeconfig.cache
+C:\Users\Johannes\Desktop\ITHS till github\Labb2\Labb 2 OOP Kitchen\obj\Debug\net6.0\ref\Labb 2 OOP Kitchen.dll

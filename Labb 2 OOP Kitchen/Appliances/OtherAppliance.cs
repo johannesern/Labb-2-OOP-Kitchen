@@ -10,6 +10,7 @@ namespace Labb_2_OOP_Kitchen.Appliances
     {
         public OtherAppliance(string type, string userInputType, string brand, bool isFunctioning) : base(type, brand, isFunctioning)
         {
+			//Förklaring, se basklass
 			TimesUsed = AroundTheCornerWarranty();
 			Type = type;
 			Brand = brand;

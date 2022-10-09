@@ -7,7 +7,7 @@ using Labb_2_OOP_Kitchen.Appliances;
 
 namespace Labb_2_OOP_Kitchen
 {
-	internal static class Utility
+	internal class Utility
 	{
 		public static void PrintingOutAllAppliances(List<KitchenAppliance> applianceList)
 		{

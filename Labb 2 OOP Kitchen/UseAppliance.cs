@@ -69,7 +69,6 @@ namespace Labb_2_OOP_Kitchen
 					Console.WriteLine("\t\tDu försökte nå ett objekt utanför listan, försök igen.");
 				}				
 			} while (run);
-			Utility.LoadingBar();
 			return applianceList;
 		}
 

@@ -10,7 +10,8 @@ namespace Labb_2_OOP_Kitchen.Appliances
     {
         public Toaster(string type, string brand, bool isFunctioning) : base(type, brand, isFunctioning)
         {
-            TimesUsed = AroundTheCornerWarranty();
+			//Förklaring, se basklass
+			TimesUsed = AroundTheCornerWarranty();
 			Type = type;
 			Brand = brand;
 			SweType = TranslateType(Type);
@@ -19,6 +20,8 @@ namespace Labb_2_OOP_Kitchen.Appliances
         public Toaster()
         {
         }
+
+        //Den enda maskinen med en egen variant av Use metoden.
         public override KitchenAppliance Use(KitchenAppliance appl)
         {
             appl.TimesUsed++;
