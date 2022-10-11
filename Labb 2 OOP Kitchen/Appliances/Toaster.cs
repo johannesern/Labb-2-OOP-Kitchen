@@ -28,7 +28,7 @@ namespace Labb_2_OOP_Kitchen.Appliances
             if (appl.IsFunctioning)
             {
                 Random rnd = new Random();
-                int i = rnd.Next(1, 3);
+                int i = rnd.Next(1, 7);
                 Console.WriteLine(i);
                 if (appl.TimesUsed > i)
                 {

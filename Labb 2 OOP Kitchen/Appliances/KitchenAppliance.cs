@@ -43,7 +43,7 @@ namespace Labb_2_OOP_Kitchen.Appliances
 			if (appl.IsFunctioning)
 			{
 				Random rnd = new Random();
-				if (appl.TimesUsed > rnd.Next(1, 5))
+				if (appl.TimesUsed > rnd.Next(1, 7))
 				{
 					Console.ForegroundColor = ConsoleColor.Yellow;
 					Console.WriteLine("\n\t\t" + machineMalfunctionMessage);
@@ -105,7 +105,7 @@ namespace Labb_2_OOP_Kitchen.Appliances
 		protected int AroundTheCornerWarranty()
 		{
 			Random random = new Random();
-			return random.Next(1, 5);
+			return random.Next(1, 4);
 		}
 	}
 }
