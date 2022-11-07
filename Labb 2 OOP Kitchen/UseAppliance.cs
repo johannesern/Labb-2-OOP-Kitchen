@@ -63,6 +63,7 @@ namespace Labb_2_OOP_Kitchen
 								break;
 							}
 					}
+					Console.ReadLine();
 				}
 				catch (Exception ex)
 				{

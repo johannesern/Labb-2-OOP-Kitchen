@@ -29,13 +29,11 @@ namespace Labb_2_OOP_Kitchen.Appliances
             {
                 Random rnd = new Random();
                 int i = rnd.Next(1, 7);
-                Console.WriteLine(i);
                 if (appl.TimesUsed > i)
                 {
 					appl.IsFunctioning = false;
-                    Console.WriteLine("\t\tKAFRÄÄääS!");
-                    Thread.Sleep(2000);
                     Console.Clear();
+                    Console.WriteLine("\n\t\tKAFRÄÄääS!");
                     Console.ForegroundColor = ConsoleColor.DarkGray;
                     Console.WriteLine("\n\t\thuvudsäkringen gick...");
                     Utility.LoadingBar();

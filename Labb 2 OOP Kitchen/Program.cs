@@ -4,6 +4,7 @@
 	{
 		static void Main(string[] args)
 		{
+			Console.ForegroundColor = ConsoleColor.White;
 			Controller control = new Controller();
 			control.Run();
 		}		
