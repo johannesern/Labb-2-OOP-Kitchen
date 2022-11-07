@@ -29,7 +29,7 @@ namespace Labb_2_OOP_Kitchen
 				if (appliance.SweType.Length < 8 && appliance.Brand.Length < 8)
 				{
 					Console.Write("\t" + appliance.SweType +
-								  "\t\t" + appliance.Brand + 
+								  "\t\t" + appliance.Brand +
 								  "\t\t" + works);
 				}
 				else if (appliance.SweType.Length > 7 && appliance.Brand.Length > 7)
@@ -54,7 +54,7 @@ namespace Labb_2_OOP_Kitchen
 			}
 			Console.WriteLine();
 		}
-		
+
 		public static int DefiningInt()
 		{
 			string input = Console.ReadLine();
@@ -92,7 +92,7 @@ namespace Labb_2_OOP_Kitchen
 
 		public static void EndOfMethod()
 		{
-			Console.WriteLine("\t\tTryck på valfri knapp för att återgå till huvudmenyn.");			
+			Console.WriteLine("\t\tTryck på valfri knapp för att återgå till huvudmenyn.");
 		}
 	}
 }

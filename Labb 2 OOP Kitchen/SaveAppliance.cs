@@ -64,7 +64,7 @@ namespace Labb_2_OOP_Kitchen
 						}
 					case "6":
 						{
-							
+
 							run = false;
 							break;
 						}
@@ -76,7 +76,7 @@ namespace Labb_2_OOP_Kitchen
 							break;
 						}
 				}
-			} while (run);			
+			} while (run);
 		}
 		private void AddOven()
 		{
@@ -169,7 +169,7 @@ namespace Labb_2_OOP_Kitchen
 			bool run = true;
 			string condition = "";
 			while (run)
-			{				
+			{
 				Console.Write("\t\tSkick (fungerar [j] fungerar inte [n]):");
 				condition = Console.ReadLine();
 				if (condition.ToLower() == "j" || condition.ToLower() == "n")
@@ -184,13 +184,13 @@ namespace Labb_2_OOP_Kitchen
 			}
 			if (condition.ToLower() == "j")
 			{
-				return true;				
+				return true;
 			}
 			else
 			{
-				return false;				
+				return false;
 			}
 		}
-		
+
 	}
 }

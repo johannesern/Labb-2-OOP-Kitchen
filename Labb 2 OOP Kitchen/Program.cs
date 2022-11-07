@@ -7,6 +7,6 @@
 			Console.ForegroundColor = ConsoleColor.White;
 			Controller control = new Controller();
 			control.Run();
-		}		
+		}
 	}
 }

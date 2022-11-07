@@ -73,7 +73,7 @@ namespace Labb_2_OOP_Kitchen
 				{
 					Console.Clear();
 					RemovingAppliance(applianceList);
-				}				
+				}
 			}
 		}
 	}

@@ -11,7 +11,7 @@ namespace Labb_2_OOP_Kitchen
 	{
 		//Listan som används genom programmet ligger i Saveappliance-klassen.
 		protected static SaveAppliance saveAppliance = new SaveAppliance();
-		
+
 		public void Run()
 		{
 			//Skapar upp ett antal objekt att använda direkt.
@@ -47,7 +47,7 @@ namespace Labb_2_OOP_Kitchen
 				try
 				{
 					choice = Console.ReadLine();
-					
+
 					if (choice == "2" || choice == "6")
 					{
 						//Val 2 & 6 går att använda utan att kontrollera listans innehåll
@@ -147,7 +147,7 @@ namespace Labb_2_OOP_Kitchen
 		}
 		private static void RepairMachines()
 		{
-			foreach(KitchenAppliance appl in saveAppliance.KitchenApplianceList)
+			foreach (KitchenAppliance appl in saveAppliance.KitchenApplianceList)
 			{
 				appl.IsFunctioning = true;
 			}

@@ -68,7 +68,7 @@ namespace Labb_2_OOP_Kitchen
 				catch (Exception ex)
 				{
 					Console.WriteLine("\t\tDu försökte nå ett objekt utanför listan, försök igen.");
-				}				
+				}
 			} while (run);
 			return applianceList;
 		}
